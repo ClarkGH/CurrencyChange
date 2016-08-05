@@ -9,8 +9,66 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.clarkhinchcliff.currencychange.MainActivity">
 
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/imageView"
+        android:src="@drawable/igglybuff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="ChangeCurrency"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/dollarEditText"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pounds"
+        android:id="@+id/poundsText"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/dollarText"
+        android:layout_alignStart="@+id/dollarText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dollars"
+        android:id="@+id/dollarText"
+        android:layout_alignBottom="@+id/dollarEditText"
+        android:layout_toLeftOf="@+id/dollarEditText"
+        android:layout_toStartOf="@+id/dollarEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/poundEditText"
+        android:layout_alignBottom="@+id/poundsText"
+        android:layout_toRightOf="@+id/poundsText"
+        android:layout_toEndOf="@+id/poundsText" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pounds to Dollars"
+        android:id="@+id/currencyButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
